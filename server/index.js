@@ -7,6 +7,7 @@ const bodyParser = require('body-parser');
 const morgan = require('morgan');
 const mongoose = require('mongoose');
 const bluebird = require('bluebird');
+const path = require('path');
 
 // database setup
 const mongooseOptions = {
@@ -30,6 +31,11 @@ const projects = require('./routes/projects');
 const messages = require('./routes/messages');
 app.use('/api/projects', projects);
 app.use('/api/messages', messages);
+
+// default route to load React
+app.get('/', (req, res) => {
+    res.sendFile(path.join(__dirname, '../client/build', 'index.html'));
+});
 
 // server setup
 const port = process.env.PORT || 3090;
