@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import './App.css';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
+import getMuiTheme from 'material-ui/styles/getMuiTheme';
+import myTheme from '../../styles/myTheme';
 import NavigationBar from '../navigationBar/NavigationBar';
 import About from '../about/About';
 import FeaturedProjects from '../featuredProjects/FeaturedProjects';
@@ -11,7 +13,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <MuiThemeProvider>
+        <MuiThemeProvider muiTheme={getMuiTheme(myTheme)}>
           <NavigationBar />
           <About />
           <FeaturedProjects />
