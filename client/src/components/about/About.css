@@ -1,0 +1,21 @@
+.profile-image {
+  width: 300px;
+  height: 300px;
+  overflow: hidden;
+  border-radius: 50%;
+  display: inline-block;
+  background-image: linear-gradient(rgba(52, 73, 94, 0.2), rgba(52, 73, 94, 0.2)), url("https://s3.amazonaws.com/andydlindsay-portfolio/profile-photo-square-nobackground.png");
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: contain;
+  margin-top: 30px;
+  margin-bottom: 30px; }
+
+.align-left {
+  text-align: left; }
+
+.headline1 {
+  font-size: 44px;
+  width: 80%;
+  margin: auto;
+  white-space: pre-wrap; }

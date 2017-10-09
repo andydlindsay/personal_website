@@ -12,15 +12,15 @@ import Footer from '../footer/Footer';
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <MuiThemeProvider muiTheme={getMuiTheme(myTheme)}>
+      <MuiThemeProvider muiTheme={getMuiTheme(myTheme)}>
+        <div className="App">
           <NavigationBar />
           <About />
           <FeaturedProjects />
           <ContactForm />
           <Footer />
-        </MuiThemeProvider>
-      </div>
+        </div>
+      </MuiThemeProvider>
     );
   }
 }
