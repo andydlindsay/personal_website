@@ -4,7 +4,7 @@ import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import getMuiTheme from 'material-ui/styles/getMuiTheme';
 import myTheme from '../../styles/myTheme';
 import Paper from 'material-ui/Paper';
-import Grid from 'material-ui/Grid';
+import Grid from 'material-ui-next/Grid';
 
 class About extends Component {
     style = {
