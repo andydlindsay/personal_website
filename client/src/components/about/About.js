@@ -22,7 +22,7 @@ class About extends Component {
                     >
                         <Grid
                             container 
-                            spacing={8} 
+                            spacing={0} 
                             justify={'center'}
                             align={'center'}
                         >
