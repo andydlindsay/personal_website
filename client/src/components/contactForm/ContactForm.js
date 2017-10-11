@@ -39,7 +39,7 @@ class ContactForm extends Component {
                 <div className="ContactForm">
                     <Paper
                         style={this.styles.paperStyle}
-                        zDepth={1}
+                        zDepth={0}
                     >
                         <Grid
                             container
