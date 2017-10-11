@@ -7,12 +7,17 @@ import AppBar from 'material-ui/AppBar';
 import FlatButton from 'material-ui/FlatButton';
 
 class NavigationBar extends Component {
+    styles = {
+        titleStyle: {
+            color: myTheme.palette.textColor
+        }
+    }
     render() {
         return (
             <MuiThemeProvider muiTheme={getMuiTheme(myTheme)}>
                 <div className="NavigationBar">
                     <AppBar 
-                        title="Andy Lindsay"
+                        title={<span style={this.styles.titleStyle}>Andy Lindsay</span>}
                         showMenuIconButton={false}
                         zDepth={0}
                         iconElementRight={
