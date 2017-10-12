@@ -33,10 +33,10 @@ class ContactForm extends Component {
     }
 
     render() {
-        // console.log('myTheme:', myTheme);
         return (
             <MuiThemeProvider muiTheme={getMuiTheme(myTheme)}>
                 <div className="ContactForm">
+                    <a name="contact-me"></a>
                     <Paper
                         style={this.styles.paperStyle}
                         zDepth={0}

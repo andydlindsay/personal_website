@@ -25,10 +25,12 @@ class NavigationBar extends Component {
                                 <FlatButton
                                     label="Projects"
                                     className="nav-item"
+                                    href="#featured-projects"
                                 />
                                 <FlatButton
                                     label="Contact Me"
                                     className="nav-item"
+                                    href="#contact-me"
                                 />
                             </div>
                         }

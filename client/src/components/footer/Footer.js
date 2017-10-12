@@ -41,14 +41,20 @@ class Footer extends Component {
                                         <BottomNavigationButton
                                             label="Codepen"
                                             icon={<i className="fa fa-codepen fa-2x"></i>}
+                                            href="https://codepen.io/andydlindsay/"
+                                            target="_blank"
                                         />
                                         <BottomNavigationButton
                                             label="LinkedIn"
                                             icon={<i className="fa fa-linkedin fa-2x"></i>}
+                                            href="https://www.linkedin.com/in/andy-lindsay-17a9762b/"
+                                            target="_blank"
                                         />
                                         <BottomNavigationButton
                                             label="Github"
                                             icon={<i className="fa fa-github fa-2x"></i>}
+                                            href="https://github.com/andydlindsay"
+                                            target="_blank"
                                         />
                                     </BottomNavigation>
                                 </div>

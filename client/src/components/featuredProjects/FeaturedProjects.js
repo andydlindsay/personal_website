@@ -38,6 +38,7 @@ class FeaturedProjects extends Component {
         return (
             <MuiThemeProvider muiTheme={getMuiTheme(myTheme)}>
                 <div className="FeaturedProjects">
+                    <a name="featured-projects"></a>
                     <Paper 
                         style={this.style}
                         zDepth={0}
