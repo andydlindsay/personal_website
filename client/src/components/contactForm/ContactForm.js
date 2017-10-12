@@ -33,7 +33,7 @@ class ContactForm extends Component {
     }
 
     render() {
-        console.log('myTheme:', myTheme);
+        // console.log('myTheme:', myTheme);
         return (
             <MuiThemeProvider muiTheme={getMuiTheme(myTheme)}>
                 <div className="ContactForm">

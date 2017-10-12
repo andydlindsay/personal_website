@@ -8,6 +8,7 @@ const morgan = require('morgan');
 const mongoose = require('mongoose');
 const bluebird = require('bluebird');
 const path = require('path');
+const cors = require('cors');
 
 // database setup
 const mongooseOptions = {
@@ -21,6 +22,9 @@ mongoose.connection.on('error', (err) => {
 
 // app setup
 const app = express();
+
+// cors middleware
+app.use(cors());
 
 // app middlewares
 app.use(morgan('combined'));
