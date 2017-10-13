@@ -38,7 +38,7 @@ class FeaturedProjects extends Component {
         return (
             <MuiThemeProvider muiTheme={getMuiTheme(myTheme)}>
                 <div className="FeaturedProjects">
-                    <a name="featured-projects"></a>
+                    <a name="featured-projects"><span></span></a>
                     <Paper 
                         style={this.style}
                         zDepth={0}
@@ -59,6 +59,7 @@ class FeaturedProjects extends Component {
             </MuiThemeProvider>
         );
     }
+    
 }
 
 function mapStateToProps({ projects }) {

@@ -10,8 +10,17 @@ import RaisedButton from 'material-ui/RaisedButton';
 import { connect } from 'react-redux';
 import { createMessage } from '../../actions';
 import { Field, reduxForm } from 'redux-form';
+import Snackbar from 'material-ui/Snackbar';
 
 class ContactForm extends Component {
+
+    constructor(props) {
+        super(props);
+        this.state = {
+            snackbarOpen: false
+        }
+    }
+
     styles = {
         paperStyle: {
             height: 'auto',
@@ -21,9 +30,18 @@ class ContactForm extends Component {
 
     onSubmit(values) {
         this.props.createMessage(values, () => {
+            this.setState({
+                snackbarOpen: true
+            });
             this.props.reset();
         });
     }
+
+    handleRequestClose = () => {
+        this.setState({
+            snackbarOpen: false
+        });
+    };
 
     renderField(field) {
         const styles = {
@@ -44,14 +62,14 @@ class ContactForm extends Component {
                 textAlign: 'left'
             }
         }
-        const { meta: { touched, error } } = field;
+        const { meta: { touched, error }, multiLine, rows, label } = field;
         const errorText = `${touched && error ? error : ''}`;
-        const numRows = field.multiLine ? field.rows : 1;
-        const multiLine = field.multiLine ? true : false;
+        const numRows = multiLine ? rows : 1;
+        const isMultiLine = multiLine ? true : false;
         return (
             <TextField
                 floatingLabelFixed={true}
-                floatingLabelText={field.label}
+                floatingLabelText={label}
                 fullWidth={true}
                 style={styles.textFieldStyle}
                 underlineStyle={styles.underlineStyle}
@@ -59,7 +77,7 @@ class ContactForm extends Component {
                 floatingLabelStyle={styles.floatingLabelStyle}
                 floatingLabelFocusStyle={styles.floatingLabelFocusStyle}
                 errorText={errorText}
-                multiLine={multiLine}
+                multiLine={isMultiLine}
                 rows={numRows}
                 {...field.input}
             />
@@ -71,7 +89,7 @@ class ContactForm extends Component {
         return (
             <MuiThemeProvider muiTheme={getMuiTheme(myTheme)}>
                 <div className="ContactForm">
-                    <a name="contact-me"></a>
+                    <a name="contact-me"><span></span></a>
                     <Paper
                         style={this.styles.paperStyle}
                         zDepth={0}
@@ -129,10 +147,17 @@ class ContactForm extends Component {
                             </Grid>
                         </Grid>
                     </Paper>
+                    <Snackbar
+                        open={this.state.snackbarOpen}
+                        message="Message submitted. Thank you!"
+                        autoHideDuration={4000}
+                        onRequestClose={this.handleRequestClose}
+                    />
                 </div>
             </MuiThemeProvider>
         );
     }
+    
 }
 
 function validate(values) {
