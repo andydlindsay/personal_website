@@ -5,6 +5,24 @@ import getMuiTheme from 'material-ui/styles/getMuiTheme';
 import myTheme from '../../styles/myTheme';
 import AppBar from 'material-ui/AppBar';
 import FlatButton from 'material-ui/FlatButton';
+import IconButton from 'material-ui/IconButton';
+import IconMenu from 'material-ui/IconMenu';
+import MenuItem from 'material-ui/MenuItem';
+import MoreVertIcon from 'material-ui/svg-icons/navigation/more-vert';
+
+const NavMenu = (props) => (
+    <IconMenu
+        {...props}
+        iconButtonElement={
+            <IconButton><MoreVertIcon /></IconButton>
+        }
+        targetOrigin={{horizontal: 'right', vertical: 'top'}}
+        anchorOrigin={{horizontal: 'right', vertical: 'top'}}
+    >
+        <MenuItem primaryText="Projects" href="#featured-projects"/>
+        <MenuItem primaryText="Contact Me" href="#contact-me"/>
+    </IconMenu>
+);
 
 class NavigationBar extends Component {
     styles = {
@@ -18,22 +36,9 @@ class NavigationBar extends Component {
                 <div className="NavigationBar">
                     <AppBar 
                         title={<span style={this.styles.titleStyle}>Andy Lindsay</span>}
-                        showMenuIconButton={false}
                         zDepth={0}
-                        iconElementRight={
-                            <div>
-                                <FlatButton
-                                    label="Projects"
-                                    className="nav-item"
-                                    href="#featured-projects"
-                                />
-                                <FlatButton
-                                    label="Contact Me"
-                                    className="nav-item"
-                                    href="#contact-me"
-                                />
-                            </div>
-                        }
+                        showMenuIconButton={false}
+                        iconElementRight={<NavMenu />}
                     />
                 </div>
             </MuiThemeProvider>
