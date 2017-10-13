@@ -3,7 +3,8 @@ import axios from 'axios';
 export const FETCH_PROJECTS = 'fetch_projects';
 export const CREATE_MESSAGE = 'create_message';
 
-const ROOT_URL = 'http://localhost:3090/api';
+// const ROOT_URL = 'http://localhost:3090/api';
+const ROOT_URL = '/api';
 
 export function fetchProjects() {
     const itemsPerPage = 6;
