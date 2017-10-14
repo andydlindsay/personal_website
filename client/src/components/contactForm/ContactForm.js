@@ -101,7 +101,7 @@ class ContactForm extends Component {
                             justify={'center'}
                         >
                             <Grid item xs={12}>
-                                <span className="headline2">CONTACT ME</span>
+                                <span className="headline headline2">CONTACT ME</span>
                             </Grid>
                             <Grid item xs={12}>
                                 <form 

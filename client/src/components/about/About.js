@@ -36,7 +36,7 @@ class About extends Component {
                             <Grid item xs={12} sm={12} md={6}>
                                 <Paper
                                     zDepth={0}
-                                    className="headline1 align-left"
+                                    className="headline headline1 align-left"
                                 >
                                     <span>
                                         Hi, I'm Andy.{"\n"}
