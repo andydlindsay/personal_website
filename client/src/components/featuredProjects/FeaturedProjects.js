@@ -25,7 +25,10 @@ class FeaturedProjects extends Component {
             return (
                 <Grid item xs={12} md={6} key={ project.title }>
                     <Paper zDepth={0} className="project">
-                        <a href={ project.links.project } target="_blank">
+                        <a 
+                            href={ project.links.project } target="_blank"
+                            title={ project.title }
+                        >
                             <img src={ project.screenshots[0].url } alt={ project.title } />
                         </a>
                     </Paper>
