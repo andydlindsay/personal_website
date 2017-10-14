@@ -3,6 +3,24 @@ body {
   padding: 0;
 }
 
+.profile-image {
+  overflow: hidden;
+  border-radius: 50%;
+  display: inline-block;
+  background-image: linear-gradient(rgba(52, 73, 94, 0.2), rgba(52, 73, 94, 0.2)), url("https://s3.amazonaws.com/andydlindsay-portfolio/profile-photo-square-nobackground.png");
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: contain;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.About {
+  width: 90%;
+  margin: auto;
+  /* border: 1px dotted black; */
+}
+
 .align-left {
   text-align: left;
 }
@@ -67,6 +85,21 @@ img {
     width: 100%;
   }
   
+  .profile-image {
+    width: 200px !important;
+    height: 200px !important;
+  }
+
+  .headline1 {
+    font-size: 32px !important;
+    width: 80% !important;
+  }
+
+  .headline2 {
+    font-size: 44px !important;
+    width: 80% !important;
+  }
+
 }
 
 @media only screen and (min-width: 480px) {
@@ -81,6 +114,21 @@ img {
   
   body {
     width: 75%;
+  }
+
+  .profile-image {
+    width: 300px !important;
+    height: 300px !important;
+  }
+
+  .headline1 {
+    font-size: 40px !important;
+    width: 80% !important;
+  }
+
+  .headline2 {
+    font-size: 52px !important;
+    width: 80% !important;
   }
 
 }

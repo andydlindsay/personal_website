@@ -4,7 +4,7 @@ import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import getMuiTheme from 'material-ui/styles/getMuiTheme';
 import myTheme from '../../styles/myTheme';
 import AppBar from 'material-ui/AppBar';
-import FlatButton from 'material-ui/FlatButton';
+// import FlatButton from 'material-ui/FlatButton';
 import IconButton from 'material-ui/IconButton';
 import IconMenu from 'material-ui/IconMenu';
 import MenuItem from 'material-ui/MenuItem';
